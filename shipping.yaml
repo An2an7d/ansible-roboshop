@@ -59,7 +59,7 @@
       state: installed
   
   - name: load shipping data
-    ansible.builtin.command: mysql -h mysql.nowheretobefound.online -uroot -pRoboShop@1 < /app/schema/shipping.js
+    ansible.builtin.shell: mysql -h mysql.nowheretobefound.online -uroot -pRoboShop@1 < /app/schema/shipping.js
 
   - name: restart shipping
     ansible.builtin.service:
