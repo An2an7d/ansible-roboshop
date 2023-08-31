@@ -1,0 +1,10 @@
+- name: setting up payment server
+  hosts: payment
+  become: yes
+  tasks: 
+  - name:
+    ansible.builtin.yum:
+      name: "{{item}}"
+      state: installed
+    loop:
+    - 
