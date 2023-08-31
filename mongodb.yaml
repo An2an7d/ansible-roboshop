@@ -6,7 +6,6 @@
     ansible.builtin.copy:
       src: mongo.repo
       dest: /etc/yum.repos.d/mongo.repo
-      remote_src: yes
   - name: installing mongodb
     ansible.builtin.yum:
       name: mongodb-org
@@ -15,7 +14,7 @@
     ansible.builtin.service:
       name: mongod
       state: started
-      enable: yes
+      enabled: yes
   - name: enable remote connections to mongodb
     ansible.builtin.replace:
       path: /etc/mongod.conf
