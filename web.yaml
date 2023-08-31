@@ -1,5 +1,5 @@
- name: setting up web server
-  hosts: mongodb
+- name: setting up web server
+  hosts: web
   become: yes
   tasks:
   - name: installing nginx
